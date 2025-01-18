@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
     environment:
       # Private Key, change to your own private key
-      PRIVATE_KEY_LOCAL: "0xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" 
+      PRIVATE_KEY_LOCAL: ${{ secrets.PVK }} 
       
       # 1. Set your preferred Node Environment
       NODE_ENV: "testnet"
