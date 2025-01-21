@@ -2,7 +2,7 @@
 FROM debian:bullseye-slim
 
 # Application version
-ARG APP_VERSION=v0.32.0
+ARG APP_VERSION=v0.42.0
 
 # Set working directory
 WORKDIR /app
