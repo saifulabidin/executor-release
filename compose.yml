@@ -25,21 +25,23 @@ services:
       # 4. Specify limit on gas usage
           # your executor will not taking order if L3 gas fee exceed this number 
           # (check current gas fee here > https://brn.explorer.caldera.xyz/)
-      EXECUTOR_MAX_L3_GAS_PRICE: "100"
+      EXECUTOR_MAX_L3_GAS_PRICE: "8"
 
       # NETWORKS & RPC (details > https://docs.t3rn.io/executor/become-an-executor/binary-setup#networks--rpc)
-      ENABLED_NETWORKS: "arbitrum-sepolia,base-sepolia,optimism-sepolia,l1rn"
-      RPC_ENDPOINTS_BSSP: "https://sepolia.base.org" # or change to your own custom rpc
-      RPC_ENDPOINTS_OPSP: "https://sepolia.optimism.io" # or change to your own custom rpc
-      RPC_ENDPOINTS_ARBT: "https://sepolia-rollup.arbitrum.io/rpc" # or change to your own custom rpc
-      RPC_ENDPOINTS_BLSS: "https://sepolia.blast.io" # or change to your own custom rpc
-      RPC_ENDPOINTS_L1RN: "https://brn.rpc.caldera.xyz" # or change to your own custom rpc
+      ENABLED_NETWORKS: "arbitrum-sepolia,optimism-sepolia,l1rn"
+      RPC_ENDPOINTS_OPSP: "https://opt-sepolia.g.alchemy.com/v2/7R1EuN8gJJQKYZX3VI8mm_aAAWOmIIDj" # or change to your own custom rpc
+      RPC_ENDPOINTS_ARBT: "https://arb-sepolia.g.alchemy.com/v2/7R1EuN8gJJQKYZX3VI8mm_aAAWOmIIDj" # or change to your own custom rpc
       
       # [Enable orders processing via RPC] ()
       # set to false you want to process orders via RPC.
       # Set to true to process via our API.
       EXECUTOR_PROCESS_PENDING_ORDERS_FROM_API: "false" 
-      
+
+      #BATCH BIDDING
+      EXECUTOR_ENABLE_BATCH_BIDDING= "true"
+
+      #BID ENABLE
+      EXECUTOR_PROCESS_BIDS_ENABLED= "true"
 
     # -- [START] (optional) to prevent logging spam, remove '#' if you want to limit logging text to be saved --
     # logging:
