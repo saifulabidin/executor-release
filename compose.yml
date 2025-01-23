@@ -38,10 +38,10 @@ services:
       EXECUTOR_PROCESS_PENDING_ORDERS_FROM_API: "false" 
 
       #BATCH BIDDING
-      EXECUTOR_ENABLE_BATCH_BIDDING= "true"
+      EXECUTOR_ENABLE_BATCH_BIDDING: "true"
 
       #BID ENABLE
-      EXECUTOR_PROCESS_BIDS_ENABLED= "true"
+      EXECUTOR_PROCESS_BIDS_ENABLED: "true"
 
     # -- [START] (optional) to prevent logging spam, remove '#' if you want to limit logging text to be saved --
     # logging:
